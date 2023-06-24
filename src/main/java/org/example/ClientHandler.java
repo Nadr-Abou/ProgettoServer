@@ -15,7 +15,7 @@ public class ClientHandler extends Thread{
     private Socket clientSocket;
     private PrintWriter out = null; // allocate to write answer to client.
 
-
+    private int nHeart = 3;
     public ClientHandler(Socket clientSocket) {
         this.clientSocket = clientSocket;
         InetAddress inetAddress = this.clientSocket.getInetAddress();
@@ -40,28 +40,16 @@ public class ClientHandler extends Thread{
             return false;
         }
 
-        String s = "";
+        String s = ""; //Eventuale stringa che verrà usata per allocare il JSON.
         Gson g = new Gson();
 
-        while(true){
-            try {
-                if ((s = in.readLine()) == null) {
-                    break;
-                }
-            }catch (IOException e){
-                return false;
-            }
-            System.out.println(s);
-        }
         return true;
     }
 
     @Override
     public void run() {
         manage();
-
         //ClientManager.getInstance().removeClient(this);
     }
-
 
 }

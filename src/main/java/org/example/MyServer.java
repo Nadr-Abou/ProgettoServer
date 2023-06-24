@@ -13,16 +13,17 @@ public class MyServer
     static boolean startServer(){
         try{
             serverSocket = new ServerSocket(portNumber);
+            System.out.println("Server start");
             return true;
         }catch (Exception e){
             return false;
         }
-
     }
 
 
     public static void main( String[] args )
     {
+
         if(!startServer()){
             return;
         }
@@ -44,8 +45,7 @@ public class MyServer
                 throw new RuntimeException(e);
             }
 
-            Match Partita = new Match(clientHandler,clientHandler2);
-
+            Match match = new Match(clientHandler,clientHandler2);
         }
     }
 
