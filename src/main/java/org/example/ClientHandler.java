@@ -12,12 +12,17 @@ import java.net.Socket;
 
 public class ClientHandler extends Thread{
     private Socket clientSocket;
+    private Socket otherClientSocket;
     private PrintWriter out = null; // allocate to write answer to client.
+    private PrintWriter outTOother = null; // allocate to write answer to client.
     private static Player thisPlayer = null;
     private static Player otherPlayer = null;
     Gson g = new Gson();
-    public ClientHandler(Socket clientSocket, double x, double y, double x2, double y2) {
+    public ClientHandler(Socket clientSocket, Socket otherClientSocket, double x, double y, double x2, double y2) {
+
         this.clientSocket = clientSocket;
+        this.otherClientSocket = otherClientSocket;
+
         thisPlayer = new Player(3, x, y);
         otherPlayer = new Player(3, x2, y2);
         InetAddress inetAddress = this.clientSocket.getInetAddress();
@@ -33,14 +38,17 @@ public class ClientHandler extends Thread{
         }
         try {
             out = new PrintWriter(clientSocket.getOutputStream(), true);
-            //out.println("Ciao client");
+            outTOother = new PrintWriter(otherClientSocket.getOutputStream(), true);
+
         } catch (IOException e) {
             e.printStackTrace();
             return false;
         }
+
         //Inizializzione della partita
         out.println(g.toJson(thisPlayer));
         out.println(g.toJson(otherPlayer));
+
 
         while (true) {
             String s;
@@ -51,6 +59,7 @@ public class ClientHandler extends Thread{
                     }
                     System.out.println(s);
                     thisPlayer = g.fromJson(s, Player.class);
+                    outTOother.println(g.toJson(thisPlayer));
                     System.out.println(thisPlayer);
                 }
             } catch (IOException e) {
