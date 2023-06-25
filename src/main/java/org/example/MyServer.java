@@ -10,17 +10,16 @@ public class MyServer
     static int portNumber = 1234;
     static ServerSocket serverSocket;
 
-    static boolean startServer(){
+    static boolean startServer() {
         try{
             serverSocket = new ServerSocket(portNumber);
-            System.out.println("Server start");
+            System.out.println("Server started");
             return true;
         }catch (Exception e){
             return false;
         }
     }
-
-
+    
     public static void main( String[] args )
     {
 
