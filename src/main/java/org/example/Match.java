@@ -9,10 +9,13 @@ public class Match {
     private ClientHandler player2; //right player
 
     public Match(Socket clientHandler1, Socket clientHandler2) {
-        this.player1 = new ClientHandler(clientHandler1, 0, 250, 1220 - 100, 500);
-        this.player2 = new ClientHandler(clientHandler2, 1220 - 100, 500, 0, 250);
+        int y = 686/2;
+        this.player1 = new ClientHandler(clientHandler1, 0, y, 1220 - 100, y);
+        this.player2 = new ClientHandler(clientHandler2, 1220 - 100, 500, 0, y);
         player1.start();
         player2.start();
     }
+
+    public void bridgePlayers(Player p) {}
 
 }
