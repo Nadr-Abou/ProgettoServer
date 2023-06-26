@@ -15,8 +15,4 @@ public class Match {
         player2.start();
     }
 
-    public Socket bridgePlayers(Socket p) {
-        return null;
-    }
-
 }

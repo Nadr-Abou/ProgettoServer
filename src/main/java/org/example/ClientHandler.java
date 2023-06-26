@@ -50,7 +50,6 @@ public class ClientHandler extends Thread{
         out.println(g.toJson(thisPlayer));
         out.println(g.toJson(otherPlayer));
 
-
         while (true) {
             String s;
             try {
@@ -58,10 +57,16 @@ public class ClientHandler extends Thread{
                     if (s.equals("exit")) {
                         break;
                     }
-                    System.out.println(s);
+                    System.out.println("This player JSON: "+s);
                     thisPlayer = g.fromJson(s, Player.class);
                     outTOother.println(g.toJson(thisPlayer));
                     System.out.println(thisPlayer);
+                }
+                if ((s = in.readLine()) != null) {
+                    System.out.println("Other player JSON: "+s);
+                    otherPlayer = g.fromJson(s, Player.class);
+                    outTOother.println(g.toJson(otherPlayer));
+                    System.out.println(otherPlayer);
                 }
             } catch (IOException e) {
                 e.printStackTrace();
