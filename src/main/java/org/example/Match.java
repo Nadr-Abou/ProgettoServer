@@ -9,9 +9,8 @@ public class Match {
     private ClientHandler player2; //right player
 
     public Match(Socket clientHandler1, Socket clientHandler2) {
-        int y = 720/2;
-        this.player1 = new ClientHandler(clientHandler1, clientHandler2,0, y,   1220 - 100, y);
-        this.player2 = new ClientHandler(clientHandler2, clientHandler1,0, y,   1220 - 100, y);
+        this.player1 = new ClientHandler(clientHandler1, clientHandler2,0, 360,   1120 /*(window width= 1220)-100*/, 360);
+        this.player2 = new ClientHandler(clientHandler2, clientHandler1,0, 360,   1120 /*(window width= 1220)-100*/, 360);
         player1.start();
         player2.start();
     }
