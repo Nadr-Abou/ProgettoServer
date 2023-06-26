@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="485bd86b-7e81-4abd-bdca-ea5092bc9de9" name="Changes" comment="Server che manda all'altro client connessione fra client completata">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Match.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +100,8 @@
       <workItem from="1687624338495" duration="1236000" />
       <workItem from="1687643512398" duration="139000" />
       <workItem from="1687716591041" duration="3891000" />
-      <workItem from="1687728621574" duration="4467000" />
+      <workItem from="1687728621574" duration="4497000" />
+      <workItem from="1687761671508" duration="2426000" />
     </task>
     <task id="LOCAL-00001" summary="Server">
       <created>1687606282111</created>
@@ -135,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687730282038</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Server che manda all'altro client connessione fra client completata">
+      <created>1687733992163</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1687733992163</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

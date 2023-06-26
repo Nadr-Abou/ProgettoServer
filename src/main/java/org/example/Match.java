@@ -11,7 +11,7 @@ public class Match {
     public Match(Socket clientHandler1, Socket clientHandler2) {
         int y = 720/2;
         this.player1 = new ClientHandler(clientHandler1, clientHandler2,0, y,   1220 - 100, y);
-        this.player2 = new ClientHandler(clientHandler2, clientHandler1,1220 - 100, 500,   0, y);
+        this.player2 = new ClientHandler(clientHandler2, clientHandler1,0, y,   1220 - 100, y);
         player1.start();
         player2.start();
     }

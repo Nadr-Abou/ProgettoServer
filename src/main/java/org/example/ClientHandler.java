@@ -23,7 +23,7 @@ public class ClientHandler extends Thread{
         this.clientSocket = clientSocket;
         this.otherClientSocket = otherClientSocket;
 
-        thisPlayer = new Player(3, x, y);  //istanza 1 => x: 0, y => 360 istanza 2 => x2: 1220 - 100, y
+        thisPlayer = new Player(3, x, y);
         otherPlayer = new Player(3, x2, y2);
         InetAddress inetAddress = this.clientSocket.getInetAddress();
         System.out.println("Connected from: " + inetAddress+", client socket: "+clientSocket.toString());
