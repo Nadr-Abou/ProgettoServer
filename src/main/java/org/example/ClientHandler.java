@@ -57,6 +57,7 @@ public class ClientHandler extends Thread{
                     if (s.equals("exit")) {
                         break;
                     }
+
                     System.out.println("This player JSON: "+s);
                     thisPlayer = g.fromJson(s, Player.class);
                     outTOother.println(g.toJson(thisPlayer));

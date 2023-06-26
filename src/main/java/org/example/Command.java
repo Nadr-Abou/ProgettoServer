@@ -11,6 +11,7 @@ public class Command {
         this.nHeart = nHeart;
         this.xOther = xOther;
         this.yOther = yOther;
+
     }
 
     public Command(String command) { // per l'exit
