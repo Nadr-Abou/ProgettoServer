@@ -15,5 +15,4 @@ public class Match {
         player2.start();
     }
 
-
 }

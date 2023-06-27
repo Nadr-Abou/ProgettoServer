@@ -27,7 +27,6 @@ public class ClientHandler extends Thread{
         otherPlayer = new Player(3, x2, y2);
         InetAddress inetAddress = this.clientSocket.getInetAddress();
         System.out.println("Connected from: " + inetAddress+", client socket: "+clientSocket.toString());
-
     }
 
     boolean manage(){
@@ -54,20 +53,28 @@ public class ClientHandler extends Thread{
             String s;
             try {
                 if ((s = in.readLine()) != null) {
-                    if (s.equals("exit")) {
+                    if (s.equals("This player")) {
+                        s = in.readLine();
+                        System.out.println("This player JSON: "+s);
+                        thisPlayer = g.fromJson(s, Player.class);
+                        outTOother.println("Other player");
+                        outTOother.println(g.toJson(thisPlayer));
+                        System.out.println(thisPlayer);
+                    } else if (s.equals("Other player")) {
+                        s = in.readLine();
+                        System.out.println("Other player JSON: "+s);
+                        otherPlayer = g.fromJson(s, Player.class);
+                        outTOother.println("This player");
+                        outTOother.println(g.toJson(otherPlayer));
+                        System.out.println(otherPlayer);
+                    } else if (s.equals("Bullet")) {
+                        s = in.readLine();
+                        System.out.println("Bullet coordinates: "+s);
+                        outTOother.println("Bullet");
+                        outTOother.println(s);
+                    } else if (s.equals("exit")) {
                         break;
                     }
-
-                    System.out.println("This player JSON: "+s);
-                    thisPlayer = g.fromJson(s, Player.class);
-                    outTOother.println(g.toJson(thisPlayer));
-                    System.out.println(thisPlayer);
-                }
-                if ((s = in.readLine()) != null) {
-                    System.out.println("Other player JSON: "+s);
-                    otherPlayer = g.fromJson(s, Player.class);
-                    outTOother.println(g.toJson(otherPlayer));
-                    System.out.println(otherPlayer);
                 }
             } catch (IOException e) {
                 e.printStackTrace();

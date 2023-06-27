@@ -11,7 +11,6 @@ public class Player {
         this.y = (int) y;
     }
 
-
     public int getnHeart() {
         return nHeart;
     }
