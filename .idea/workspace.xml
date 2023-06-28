@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="485bd86b-7e81-4abd-bdca-ea5092bc9de9" name="Changes" comment="Client spostato sempre a sinistra. Lasciare così!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Match.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Command.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +104,8 @@
       <workItem from="1687761671508" duration="2426000" />
       <workItem from="1687764667940" duration="99000" />
       <workItem from="1687765140141" duration="2253000" />
+      <workItem from="1687954502700" duration="457000" />
+      <workItem from="1687960997306" duration="1595000" />
     </task>
     <task id="LOCAL-00001" summary="Server">
       <created>1687606282111</created>
@@ -171,7 +174,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/ClientHandler.java</url>
           <line>74</line>
-          <properties class="org.example.ClientHandler" method="run">
+          <properties class="org.example.ClientHandler">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>

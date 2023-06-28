@@ -84,8 +84,12 @@ public class ClientHandler extends Thread{
         return true;
     }
 
+    public void exit(){
+        outTOother.println(g.toJson(new Command("exit")));
+    }
     @Override
     public void run() {
         manage();
+        exit();
     }
 }
