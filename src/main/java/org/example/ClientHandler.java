@@ -53,6 +53,7 @@ public class ClientHandler extends Thread{
             String s;
             try {
                 if ((s = in.readLine()) != null) {
+                    System.out.println(s);
                     if (s.equals("This player")) {
                         s = in.readLine();
                         System.out.println("This player JSON: "+s);
@@ -75,9 +76,22 @@ public class ClientHandler extends Thread{
                     } else if (s.equals("exit")) {
                         break;
                     }
+                    try{
+                        System.out.println("try");
+                        if(g.fromJson(s, Command.class).command.equals("restart")){
+                            System.out.println("restart");
+                            outTOother.println(g.toJson(new Command("restart")));
+                        }
+                        else if(g.fromJson(s, Command.class).command.equals("ready")){
+                            System.out.println("ready");
+                            outTOother.println(g.toJson(new Command("ready")));
+                        }
+                    }catch (Exception e){
+
+                    }
                 }
             } catch (IOException e) {
-                e.printStackTrace();
+                System.out.println("un player si è disconnesso");
                 break;
             }
         }

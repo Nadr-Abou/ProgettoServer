@@ -9,9 +9,7 @@ public class Command {
         this.command = command;
     }
 
-    public String getCommand() {
-        return command;
-    }
+
 
 
 }

@@ -106,6 +106,8 @@
       <workItem from="1687765140141" duration="2253000" />
       <workItem from="1687954502700" duration="457000" />
       <workItem from="1687960997306" duration="1595000" />
+      <workItem from="1687972682693" duration="6527000" />
+      <workItem from="1687988064297" duration="5711000" />
     </task>
     <task id="LOCAL-00001" summary="Server">
       <created>1687606282111</created>
@@ -167,20 +169,5 @@
     <MESSAGE value="Server che manda all'altro client connessione fra client completata" />
     <MESSAGE value="Client spostato sempre a sinistra. Lasciare così!" />
     <option name="LAST_COMMIT_MESSAGE" value="Client spostato sempre a sinistra. Lasciare così!" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/ClientHandler.java</url>
-          <line>74</line>
-          <properties class="org.example.ClientHandler">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
